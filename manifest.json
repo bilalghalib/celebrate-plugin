@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Modify CSS and HTML",
+  "version": "0.1.0",
+  "description": "Lateral blog post demo extension",
+   
+        "permissions": [
+          "contextMenus"
+        ],
+
+   "background": {
+    "scripts": ["jquery.js", "background.js"],
+    "persistent": false
+  },
+
+        "icons": {
+          "16": "icon-bitty.png"
+        },
+        "permissions": [
+    "webNavigation"
+  ],
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["jquery.js","content.js"],
+    "matches": ["https://*/*"]
+  }]
+ 
+}
