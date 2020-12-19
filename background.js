@@ -1,25 +1,13 @@
-   chrome.webNavigation.onCompleted.addListener(function() {
-      alert("This is my favorite website!");
+  //  chrome.webNavigation.onCompleted.addListener(function() {
+  //     alert("This is my favorite website!");
 
-  }, {url: [{urlMatches : 'https://testing.bloom.pm/'}]});
+  // }, {url: [{urlMatches : 'http://127.0.0.1:5500/testweb/index.html'}]});
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     //alert(request.message);
     // Callback
     sendResponse({ message: 'Content script has received that message ⚡' })
 })
-
-
-  chrome.runtime.onMessage.addListener(function(message, callback) {
-
-    if (message.message == "s") {
-      alert("Alarm!!");
-    } else if (message.message == "runLogic") {
-      alert("“runLogic”!");
-    } else if (message.message == "changeColor") {
-            alert("changecolor!");
-    };
-  });
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status == 'complete') {
