@@ -1,10 +1,20 @@
 $( document ).ready(function() {
-    const msg = 's'
-    chrome.runtime.sendMessage({ message: msg }, function(response) {
-        console.log(response);
+    // const msg = 's'
+    // chrome.runtime.sendMessage({ message: msg }, function(response) {
+    //     console.log(response);
+    // });
+    var btn = document.getElementById('complete');
+    btn.addEventListener('click', function() {
+        alert("button clicked");
     });
+    
+    chrome.runtime.sendMessage({cmd:"celebration_file"}, function(htmlString){
+        $("body").append(htmlString);
+    })
+    chrome.runtime.sendMessage({cmd:"test"}, function(htmlString){
+        $("body").append("<p> this is p elemnt </p>");
+    })
 });
-
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.message == "s") {

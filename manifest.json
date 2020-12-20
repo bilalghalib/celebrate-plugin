@@ -20,6 +20,10 @@
         "permissions": [
     "webNavigation"
   ],
+  "web_accessible_resources": [
+    "celebration.html"
+  ],
+  
 
   "content_scripts": [{
     "css": ["styles.css"],

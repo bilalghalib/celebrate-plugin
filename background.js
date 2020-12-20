@@ -3,12 +3,26 @@
 
   // }, {url: [{urlMatches : 'http://127.0.0.1:5500/testweb/index.html'}]});
 
+// chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+//     //alert(request.message);
+//     // Callback
+//     sendResponse({ message: 'Content script has received that message ⚡' })
+// })
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    //alert(request.message);
-    // Callback
-    sendResponse({ message: 'Content script has received that message ⚡' })
+    if(request.cmd === "celebration_file"){
+        $.ajax({
+            url: chrome.extension.getURL("celebration.html"),
+            dataType: "html",
+            success: sendResponse
+        });
+       return true;
+    } 
+    else if(request.cmd === "test") {
+        sendResponse({});
+        return true;
+    }
+   
 })
-
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status == 'complete') {
         chrome.tabs.query({ active: true }, function(tabs) {
