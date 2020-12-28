@@ -11,5 +11,8 @@
 To run the test webpage:
 
 ```
-npx http-server testweb/index.html
+cd testweb
+npx http-server
 ```
+
+And go to the URL specified by `http-server`

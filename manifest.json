@@ -28,7 +28,7 @@
   "content_scripts": [{
     "css": ["styles.css", "celecration.css"],
     "js": ["jquery.js","content.js", "jquery.wheelgame.js"],
-    "matches": ["http://127.0.0.1:5500/testweb/index.html"]
+    "matches": ["http://127.0.0.1/*"]
   }]
  
 }
