@@ -17,10 +17,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         });
        return true;
     } 
-    else if(request.cmd === "test") {
-        sendResponse({});
-        return true;
-    }
+  
    
 })
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {

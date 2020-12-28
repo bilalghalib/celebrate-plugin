@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
  
-  "name": "Modify CSS and HTML",
+  "name": "Task Complete Celebration",
   "version": "0.1.0",
-  "description": "Lateral blog post demo extension",
+  "description": "Celebrate your tasks completion with Bloom",
    
         "permissions": [
           "contextMenus"
@@ -26,8 +26,8 @@
   
 
   "content_scripts": [{
-    "css": ["styles.css"],
-    "js": ["jquery.js","content.js"],
+    "css": ["styles.css", "celecration.css"],
+    "js": ["jquery.js","content.js", "jquery.wheelgame.js"],
     "matches": ["http://127.0.0.1:5500/testweb/index.html"]
   }]
  
