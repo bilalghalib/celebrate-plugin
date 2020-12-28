@@ -84,7 +84,7 @@
   animation: explosion 2s 0.4s ease-in-out infinite;
 }
 #container {
-  width: 800px;
+  width: 900px;
   height: 600px;
 }
 #firework1 {
@@ -203,24 +203,38 @@ small {
 .flex-container {
   display: flex;
   flex-direction: row;
+  height: 170px;
 }
 .flex-left {
   width: 75%;
   height: 25%;
 }
 .flex-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 25%;
 }
 #spinbtn {
+  display: block;
+  margin-top: 0 auto;
+  height: 80px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
   border: solid 1px #54617d;
   border-color: #484e59 #54617d #4c5c7a #54617d;
-  font-size: 12px;
+  font-size: 28px;
   line-height: 28px;
-  border-radius: 5px;
-  background-color: #f1bb4e; /* Green */
+  border-radius: 50%;
+  background-color: rgb(242, 202, 123);
   color: white;
   display: inline-block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#spinbtn:hover {
+  transform: translateY(-5px);
+  background-color: rgba(241, 187, 78, 1);
 }
 .close {
   position: absolute;
