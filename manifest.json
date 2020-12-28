@@ -26,7 +26,7 @@
   
 
   "content_scripts": [{
-    "css": ["styles.css", "celecration.css"],
+    "css": ["styles.css", "celebration.css"],
     "js": ["jquery.js","content.js", "jquery.wheelgame.js"],
     "matches": ["http://127.0.0.1/*"]
   }]
