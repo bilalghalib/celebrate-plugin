@@ -4,15 +4,18 @@
 
 1. Visit `chrome://extensions`
 2. Enable developer mode
-3. Drag the folder containing the above files into the window.
+3. Drag the folder containing the files into the window.
 
 ## Testing
 
 To run the test webpage:
+
+1. Install http-server: `npm install -g http-server`
+2. Run the local server:
 
 ```
 cd testweb
 npx http-server
 ```
 
-And go to the URL specified by `http-server`
+3. Go to the URL specified by `http-server`
