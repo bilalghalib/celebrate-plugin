@@ -1,34 +1,40 @@
 {
   "manifest_version": 2,
- 
   "name": "Task Complete Celebration",
   "version": "0.1.0",
   "description": "Celebrate your tasks completion with Bloom",
-   
-        "permissions": [
-          "contextMenus"
-        ],
-
-   "background": {
-    "scripts": ["jquery.js", "background.js"],
+  "permissions": [
+    "contextMenus",
+    "webNavigation",
+    "https://raghadhav.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "jquery.js",
+      "background.js"
+    ],
     "persistent": false
   },
-
-        "icons": {
-          "16": "icon-bitty.png"
-        },
-        "permissions": [
-    "webNavigation"
-  ],
+  "icons": {
+    "16": "icon-bitty.png"
+  },
   "web_accessible_resources": [
     "celebration.html"
   ],
-  
-
-  "content_scripts": [{
-    "css": ["styles.css", "celebration.css"],
-    "js": ["jquery.js","content.js", "jquery.wheelgame.js"],
-    "matches": ["http://127.0.0.1/*"]
-  }]
- 
+  "content_scripts": [
+    {
+      "css": [
+        "styles.css",
+        "celebration.css"
+      ],
+      "js": [
+        "jquery.js",
+        "content.js",
+        "jquery.wheelgame.js"
+      ],
+      "matches": [
+        "http://127.0.0.1/*"
+      ]
+    }
+  ]
 }
