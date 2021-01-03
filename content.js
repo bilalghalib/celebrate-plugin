@@ -1,5 +1,5 @@
 function loadcelebrations() {
-    fetch('https://raghadhav.com/celebrate/api/celebrations').then(r => r.json()).then(result => {
+    fetch('https://raghadhav.com/celebrate/api').then(r => r.json()).then(result => {
         console.log(result)
         let container = document.getElementById('container');
         console.log(result.length)
