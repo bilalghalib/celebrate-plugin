@@ -19,3 +19,7 @@ npx http-server
 ```
 
 3. Go to the URL specified by `http-server`
+
+## Backend 
+
+Wheel values are currently pulled from: `https://raghadhav.com/celebrate/api`
